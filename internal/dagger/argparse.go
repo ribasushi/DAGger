@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/klauspost/cpuid"
+	"github.com/klauspost/cpuid/v2"
 	"github.com/multiformats/go-base36"
 
 	dgrblock "github.com/ribasushi/DAGger/internal/dagger/block"
@@ -148,7 +148,7 @@ func NewFromArgv(argv []string) (dgr *Dagger) {
 		s.SysStats.CPU.Family = cpuid.CPU.Family
 		s.SysStats.CPU.Model = cpuid.CPU.Model
 
-		feats := cpuid.CPU.Features.Strings()
+		feats := cpuid.CPU.FeatureSet()
 		sort.Strings(feats)
 		s.SysStats.CPU.FeaturesStr = strings.Join(feats, " ")
 	}

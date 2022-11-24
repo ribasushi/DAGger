@@ -12,7 +12,7 @@ DAGTAG_NOSANCHECKS := nosanchecks_DAGger nosanchecks_qringbuf
 
 CROSSBUILD := $(addprefix crossbuild-, \
 	linux/386 linux/amd64 linux/arm64 linux/ppc64 linux/mips \
-	darwin/386 darwin/amd64 \
+	darwin/amd64 darwin/arm64 \
 	freebsd/arm openbsd/386 dragonfly/amd64 \
 	windows/386 windows/amd64 \
 )
